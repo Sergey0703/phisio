@@ -913,6 +913,43 @@
                 gap: 1.5rem;
             }
 
+            .section {
+                padding: 4rem 0;
+            }
+
+            .hero-image-main svg,
+            .about-image-main svg {
+                width: 100%;
+                height: auto;
+            }
+
+            /* Mobile Menu Styles */
+            .nav.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 2rem;
+                box-shadow: var(--shadow-md);
+                gap: 1.5rem;
+                animation: slideDown 0.3s ease-out;
+            }
+
+            @keyframes slideDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
             .services-grid,
             .testimonials-grid {
                 grid-template-columns: 1fr;
@@ -1473,9 +1510,21 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                    // Close mobile menu if open
+                    document.querySelector('.nav').classList.remove('active');
                 }
             });
         });
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        }
     </script>
 </body>
 
