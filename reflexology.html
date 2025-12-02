@@ -152,7 +152,11 @@
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.2rem;
+        }
+
+        .logo-icon svg {
+            width: 24px;
+            height: 24px;
         }
 
         .logo-text {
@@ -502,9 +506,14 @@
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 2rem;
             margin-bottom: 1.5rem;
             transition: transform 0.4s ease;
+        }
+
+        .service-icon svg {
+            width: 36px;
+            height: 36px;
+            fill: white;
         }
 
         .service-card:hover .service-icon {
@@ -839,6 +848,12 @@
             transition: all 0.3s ease;
         }
 
+        .footer-social a svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
         .footer-social a:hover {
             background: var(--color-sage);
             transform: translateY(-3px);
@@ -1008,7 +1023,20 @@
     <header class="header">
         <div class="header-container">
             <a href="#" class="logo">
-                <div class="logo-icon">🌿</div>
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                        <path
+                            d="M20 36C28.8366 36 36 28.8366 36 20C36 11.1634 28.8366 4 20 4C11.1634 4 4 11.1634 4 20C4 28.8366 11.1634 36 20 36Z"
+                            fill="white" fill-opacity="0.2" />
+                        <path
+                            d="M20 8C18 12 14 16 12 22C11 25 12 28 14 30C16 32 20 32 22 30C24 28 28 24 28 18C28 12 24 9 20 8Z"
+                            fill="white" />
+                        <path d="M20 8C21 12 24 15 26 18" stroke="var(--color-primary)" stroke-width="1"
+                            stroke-linecap="round" />
+                        <path d="M20 15C18 18 16 22 16 25" stroke="var(--color-primary)" stroke-width="1"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
                 <span class="logo-text">Dublin Reflexology</span>
             </a>
             <nav class="nav">
@@ -1171,7 +1199,20 @@
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🦶</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.5 2C13.5 2.82843 12.8284 3.5 12 3.5C11.1716 3.5 10.5 2.82843 10.5 2C10.5 1.17157 11.1716 0.5 12 0.5C12.8284 0.5 13.5 1.17157 13.5 2Z" />
+                            <path
+                                d="M17.5 4C17.5 5.10457 16.6046 6 15.5 6C14.3954 6 13.5 5.10457 13.5 4C13.5 2.89543 14.3954 2 15.5 2C16.6046 2 17.5 2.89543 17.5 4Z" />
+                            <path
+                                d="M21 7.5C21 8.88071 19.8807 10 18.5 10C17.1193 10 16 8.88071 16 7.5C16 6.11929 17.1193 5 18.5 5C19.8807 5 21 6.11929 21 7.5Z" />
+                            <path
+                                d="M8.5 4C8.5 5.10457 7.60457 6 6.5 6C5.39543 6 4.5 5.10457 4.5 4C4.5 2.89543 5.39543 2 6.5 2C7.60457 2 8.5 2.89543 8.5 4Z" />
+                            <path
+                                d="M12 22C16.4183 22 20 18.4183 20 14C20 12.5 19 11 18 11C16.5 11 16 12.5 15 13C14 13.5 13 13 12 11C11 9 13 7 11 7C8 7 4 10 4 14C4 18.4183 7.58172 22 12 22Z" />
+                        </svg>
+                    </div>
                     <h3 class="service-title">Reflexology</h3>
                     <p class="service-description">
                         This gentle therapy may bring relief to a wide range of conditions.
@@ -1180,7 +1221,17 @@
                     </p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🤰</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13 4C13 5.10457 12.1046 6 11 6C9.89543 6 9 5.10457 9 4C9 2.89543 9.89543 2 11 2C12.1046 2 13 2.89543 13 4Z" />
+                            <path
+                                d="M16 14C16 17.3137 13.3137 20 10 20C6.68629 20 4 17.3137 4 14C4 10.6863 6.68629 8 10 8C13.3137 8 16 10.6863 16 14Z"
+                                opacity="0.5" />
+                            <path
+                                d="M13.828 10.172C14.5 11 15 12.5 15 14C15 16.7614 12.7614 19 10 19C7.23858 19 5 16.7614 5 14C5 12.5 5.5 11 6.172 10.172C6.5 8 8 7 10 7C12 7 13.5 8 13.828 10.172Z" />
+                        </svg>
+                    </div>
                     <h3 class="service-title">Pregnancy Care</h3>
                     <p class="service-description">
                         Specialized reflexology for expecting mothers, helping to ease common
@@ -1188,7 +1239,14 @@
                     </p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🌸</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L14 7H19L15 11L16.5 16L12 13.5L7.5 16L9 11L5 7H10L12 2Z" opacity="0.5" />
+                            <path
+                                d="M12 6C13.5 6 15 7.5 15 9C15 10.5 13.5 12 12 12C10.5 12 9 10.5 9 9C9 7.5 10.5 6 12 6Z" />
+                            <path d="M12 14C15 14 17 16 17 18C17 20 15 21 12 21C9 21 7 20 7 18C7 16 9 14 12 14Z" />
+                        </svg>
+                    </div>
                     <h3 class="service-title">Stress Relief</h3>
                     <p class="service-description">
                         Combat daily stress and tension with targeted reflexology techniques
@@ -1196,7 +1254,15 @@
                     </p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">💆</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 4C14 4 15.5 5.5 15.5 7.5C15.5 9.5 14 11 12 11C10 11 8.5 9.5 8.5 7.5C8.5 5.5 10 4 12 4Z" />
+                            <path
+                                d="M6 14C6 12 8 11 12 11C16 11 18 12 18 14V16C18 17 17 18 16 18H8C7 18 6 17 6 16V14Z" />
+                            <path d="M4 14L2 12M20 14L22 12" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
                     <h3 class="service-title">Pain Management</h3>
                     <p class="service-description">
                         Natural pain relief through reflexology, addressing chronic conditions
@@ -1204,7 +1270,14 @@
                     </p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🧘</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="16" width="4" height="6" rx="1" />
+                            <rect x="8" y="11" width="8" height="4" rx="2" />
+                            <rect x="6" y="6" width="12" height="4" rx="2" />
+                            <rect x="9" y="2" width="6" height="3" rx="1.5" />
+                        </svg>
+                    </div>
                     <h3 class="service-title">Wellness Sessions</h3>
                     <p class="service-description">
                         Regular maintenance sessions to support overall health, boost immunity,
@@ -1212,7 +1285,15 @@
                     </p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">👶</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16 4C17.5 4 19 5.5 19 7.5C19 9.5 17.5 11 16 11C14.5 11 13 9.5 13 7.5C13 5.5 14.5 4 16 4Z" />
+                            <path d="M8 8C9 8 10 9 10 10.5C10 12 9 13 8 13C7 13 6 12 6 10.5C6 9 7 8 8 8Z" />
+                            <path d="M16 12C19 12 21 14 21 16V20H11V16C11 14 13 12 16 12Z" />
+                            <path d="M8 14C10 14 11 15 11 16.5V20H3V16.5C3 15 5 14 8 14Z" />
+                        </svg>
+                    </div>
                     <h3 class="service-title">Family Care</h3>
                     <p class="service-description">
                         Gentle reflexology treatments suitable for all ages, from children
@@ -1339,19 +1420,35 @@
                     </p>
                     <div class="about-features">
                         <div class="feature-item">
-                            <div class="feature-icon">✓</div>
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
                             <div class="feature-text">Certified & Experienced Practitioners</div>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-icon">✓</div>
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
                             <div class="feature-text">Calm & Welcoming Environment</div>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-icon">✓</div>
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
                             <div class="feature-text">Personalized Treatment Plans</div>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-icon">✓</div>
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
                             <div class="feature-text">Suitable for All Ages</div>
                         </div>
                     </div>
@@ -1450,9 +1547,26 @@
                         healing and wellness journey.
                     </p>
                     <div class="footer-social">
-                        <a href="#" aria-label="Facebook">f</a>
-                        <a href="#" aria-label="Instagram">i</a>
-                        <a href="#" aria-label="Twitter">t</a>
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path
+                                    d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61991 14.1902 8.22773 13.4229 8.09406 12.5922C7.9604 11.7616 8.09206 10.9099 8.47032 10.1584C8.84858 9.40685 9.45418 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87658 12.63 8C13.5245 8.01371 14.3764 8.37451 15.0049 9.00623C15.6335 9.63796 15.9893 10.4935 16 11.37Z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23 3C22.0424 3.67548 20.9821 4.19211 19.86 4.53C19.2577 3.83751 18.4573 3.34675 17.5752 3.12935C16.6932 2.91196 15.7754 2.97998 14.9563 3.32351C14.1373 3.66703 13.4593 4.26813 13.0192 5.04072C12.5792 5.81331 12.4002 6.71713 12.508 7.62C10.7953 7.53407 9.11714 7.08921 7.59463 6.31752C6.07212 5.54583 4.74284 4.4665 3.66 3.14C3.66 3.14 0 11 8 15C5.97237 16.375 3.6124 17.0988 1.19 17.09C6.03 20.09 11.68 19.92 16.32 15.67C20.96 11.42 20.96 7.17 20.96 7.17C22.0023 6.18562 22.8228 4.98064 23.38 3.66L23 3Z" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-col">
