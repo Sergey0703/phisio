@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dublin Reflexology | Natural Healing for Body & Mind</title>
+    <meta name="description"
+        content="Experience the gentle therapy of reflexology in Dublin. Suitable for all ages and every stage of life. Book your session today.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --color-primary: #2d7d82;
+            --color-primary-light: #4a9da3;
+            --color-secondary: #d4a59a;
+            --color-accent: #e8c4b8;
+            --color-sage: #9db5a5;
+            --color-cream: #faf7f4;
+            --color-cream-dark: #f5f0ea;
+            --color-text-dark: #2c3e3f;
+            --color-text-medium: #5a6c6d;
+            --color-text-light: #8a9899;
+
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
+
+            --shadow-sm: 0 2px 8px rgba(45, 125, 130, 0.08);
+            --shadow-md: 0 4px 16px rgba(45, 125, 130, 0.12);
+            --shadow-lg: 0 8px 32px rgba(45, 125, 130, 0.16);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-text-dark);
+            background-color: var(--color-cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Floating botanical decoration */
+        .botanical-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.4;
+        }
+
+        .botanical-element {
+            position: absolute;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .botanical-element:nth-child(1) {
+            top: 10%;
+            left: 5%;
+            width: 120px;
+            height: 120px;
+            animation-delay: 0s;
+        }
+
+        .botanical-element:nth-child(2) {
+            top: 60%;
+            right: 8%;
+            width: 100px;
+            height: 100px;
+            animation-delay: 5s;
+        }
+
+        .botanical-element:nth-child(3) {
+            top: 85%;
+            left: 10%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 10s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+                opacity: 0.6;
+            }
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(250, 247, 244, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(45, 125, 130, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            padding: 1rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-sage));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .logo-text {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        .nav {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--color-text-medium);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav a:hover {
+            color: var(--color-primary);
+        }
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        .btn {
+            padding: 0.75rem 1.75rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 80px;
+            background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-cream-dark) 100%);
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .hero-badge::before {
+            content: '✦';
+            font-size: 1rem;
+        }
+
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            font-weight: 600;
+            color: var(--color-text-dark);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title span {
+            color: var(--color-primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--color-text-medium);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(45, 125, 130, 0.2);
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            margin-top: 0.5rem;
+        }
+
+        .hero-image {
+            position: relative;
+            animation: fadeInRight 1s ease-out 0.3s both;
+        }
+
+        .hero-image-main {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-image-main img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-image-decoration {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
+            opacity: 0.3;
+            filter: blur(60px);
+            animation: pulse 4s infinite ease-in-out;
+        }
+
+        .hero-image-decoration:nth-child(1) {
+            top: -50px;
+            right: -50px;
+        }
+
+        .hero-image-decoration:nth-child(2) {
+            bottom: -50px;
+            left: -50px;
+            animation-delay: 2s;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Services Section */
+        .section {
+            padding: 6rem 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--color-text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--color-text-medium);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-sage));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-primary-light), var(--color-sage));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .service-title {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            color: var(--color-text-medium);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image-main {
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-image-main img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-image-badge {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+
+        .about-image-badge-number {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            line-height: 1;
+        }
+
+        .about-image-badge-text {
+            font-size: 0.85rem;
+            color: var(--color-text-medium);
+            margin-top: 0.5rem;
+        }
+
+        .about-content h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--color-text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            color: var(--color-text-medium);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: grid;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--color-cream);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            background: var(--color-cream-dark);
+            transform: translateX(5px);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-sage));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            font-weight: 500;
+            color: var(--color-text-dark);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-cream-dark) 100%);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .testimonial-quote {
+            position: absolute;
+            top: 1.5rem;
+            left: 2rem;
+            font-size: 4rem;
+            color: var(--color-accent);
+            opacity: 0.3;
+            font-family: var(--font-serif);
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-stars span {
+            color: #f59e0b;
+            font-size: 1.25rem;
+        }
+
+        .testimonial-text {
+            color: var(--color-text-medium);
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-sage));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        .testimonial-author-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-author-name {
+            font-weight: 600;
+            color: var(--color-text-dark);
+        }
+
+        .testimonial-author-role {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta p {
+            font-size: 1.15rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .cta .btn-secondary {
+            border-color: white;
+            color: white;
+        }
+
+        .cta .btn-secondary:hover {
+            background: white;
+            color: var(--color-primary);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--color-text-dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-sage);
+        }
+
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--color-sage);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--color-sage);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--color-primary);
+            transition: all 0.3s ease;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+
+            .hero-container,
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cta h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Botanical Background -->
+    <div class="botanical-bg">
+        <div class="botanical-element">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="40" fill="url(#botanical1)" opacity="0.6" />
+                <defs>
+                    <radialGradient id="botanical1">
+                        <stop offset="0%" stop-color="#9db5a5" />
+                        <stop offset="100%" stop-color="#2d7d82" />
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+        <div class="botanical-element">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="35" fill="url(#botanical2)" opacity="0.5" />
+                <defs>
+                    <radialGradient id="botanical2">
+                        <stop offset="0%" stop-color="#e8c4b8" />
+                        <stop offset="100%" stop-color="#d4a59a" />
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+        <div class="botanical-element">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="30" fill="url(#botanical3)" opacity="0.4" />
+                <defs>
+                    <radialGradient id="botanical3">
+                        <stop offset="0%" stop-color="#4a9da3" />
+                        <stop offset="100%" stop-color="#9db5a5" />
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">🌿</div>
+                <span class="logo-text">Dublin Reflexology</span>
+            </a>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact" class="btn btn-primary">Book Now</a>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">Trusted Reflexology in Dublin</div>
+                <h1 class="hero-title">
+                    Welcome to<br>
+                    <span>Dublin Reflexology</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Reflexology is suitable for all ages and throughout every stage of life.
+                    This gentle therapy may bring relief to a wide range of conditions,
+                    promoting natural healing and deep relaxation.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Make Reservation</a>
+                    <a href="#services" class="btn btn-secondary">Our Treatments</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">2000+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-decoration"></div>
+                <div class="hero-image-decoration"></div>
+                <div class="hero-image-main">
+                    <svg viewBox="0 0 600 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <image href="phisio.png" width="600" height="700" preserveAspectRatio="xMidYMid slice"
+                            opacity="0.7" />
+
+                        <!-- Soft overlay to mute the image -->
+                        <rect width="600" height="700" fill="#faf7f4" opacity="0.2" />
+
+                        <!-- Botanical Leaves -->
+                        <g opacity="0.7">
+                            <!-- Large Leaf Left -->
+                            <path d="M150 300 Q120 320 130 360 Q140 400 170 410 Q160 380 165 350 Q170 320 150 300Z"
+                                fill="#9db5a5" opacity="0.6" />
+                            <path d="M150 300 Q165 320 160 350" stroke="#2d7d82" stroke-width="2" opacity="0.4" />
+
+                            <!-- Large Leaf Right -->
+                            <path d="M450 250 Q480 270 470 310 Q460 350 430 360 Q440 330 435 300 Q430 270 450 250Z"
+                                fill="#4a9da3" opacity="0.5" />
+                            <path d="M450 250 Q435 270 440 300" stroke="#2d7d82" stroke-width="2" opacity="0.4" />
+
+                            <!-- Branch with leaves -->
+                            <path d="M200 150 Q250 200 300 220 Q350 240 400 250" stroke="#5a6c6d" stroke-width="3"
+                                opacity="0.3" />
+
+                            <!-- Small leaves on branch -->
+                            <ellipse cx="230" cy="175" rx="25" ry="15" fill="#9db5a5" opacity="0.5"
+                                transform="rotate(-30 230 175)" />
+                            <ellipse cx="270" cy="200" rx="30" ry="18" fill="#4a9da3" opacity="0.5"
+                                transform="rotate(20 270 200)" />
+                            <ellipse cx="330" cy="230" rx="28" ry="16" fill="#9db5a5" opacity="0.5"
+                                transform="rotate(-15 330 230)" />
+                            <ellipse cx="370" cy="245" rx="26" ry="15" fill="#d4a59a" opacity="0.5"
+                                transform="rotate(25 370 245)" />
+                        </g>
+
+                        <!-- Floating botanical elements -->
+                        <g opacity="0.6">
+                            <!-- Flower 1 -->
+                            <circle cx="280" cy="400" r="35" fill="#e8c4b8" opacity="0.4" />
+                            <circle cx="265" cy="390" r="15" fill="#d4a59a" opacity="0.6" />
+                            <circle cx="295" cy="390" r="15" fill="#d4a59a" opacity="0.6" />
+                            <circle cx="280" cy="415" r="15" fill="#d4a59a" opacity="0.6" />
+                            <circle cx="280" cy="385" r="15" fill="#d4a59a" opacity="0.6" />
+                            <circle cx="280" cy="400" r="12" fill="#e8c4b8" />
+
+                            <!-- Flower 2 -->
+                            <circle cx="380" cy="450" r="28" fill="#9db5a5" opacity="0.3" />
+                            <circle cx="368" cy="443" r="12" fill="#4a9da3" opacity="0.5" />
+                            <circle cx="392" cy="443" r="12" fill="#4a9da3" opacity="0.5" />
+                            <circle cx="380" cy="463" r="12" fill="#4a9da3" opacity="0.5" />
+                            <circle cx="380" cy="437" r="12" fill="#4a9da3" opacity="0.5" />
+                            <circle cx="380" cy="450" r="10" fill="#2d7d82" opacity="0.6" />
+                        </g>
+
+                        <!-- Decorative circles -->
+                        <g opacity="0.3">
+                            <circle cx="500" cy="350" r="80" fill="url(#circleGrad1)" />
+                            <circle cx="100" cy="500" r="60" fill="url(#circleGrad2)" />
+                            <circle cx="520" cy="550" r="50" fill="url(#circleGrad3)" />
+                        </g>
+
+                        <!-- Stem/Grass elements at bottom -->
+                        <g opacity="0.4">
+                            <path d="M150 650 Q160 600 170 650" stroke="#9db5a5" stroke-width="3" fill="none" />
+                            <path d="M200 650 Q195 580 190 650" stroke="#4a9da3" stroke-width="2.5" fill="none" />
+                            <path d="M250 650 Q260 590 270 650" stroke="#9db5a5" stroke-width="3" fill="none" />
+                            <path d="M320 650 Q315 600 310 650" stroke="#2d7d82" stroke-width="2" fill="none" />
+                            <path d="M370 650 Q380 580 390 650" stroke="#9db5a5" stroke-width="3" fill="none" />
+                            <path d="M430 650 Q425 600 420 650" stroke="#4a9da3" stroke-width="2.5" fill="none" />
+                        </g>
+
+                        <defs>
+                            <linearGradient id="heroGradient" x1="0" y1="0" x2="600" y2="700">
+                                <stop offset="0%" stop-color="#faf7f4" />
+                                <stop offset="100%" stop-color="#f5f0ea" />
+                            </linearGradient>
+                            <radialGradient id="circleGrad1">
+                                <stop offset="0%" stop-color="#9db5a5" stop-opacity="0.3" />
+                                <stop offset="100%" stop-color="#2d7d82" stop-opacity="0.1" />
+                            </radialGradient>
+                            <radialGradient id="circleGrad2">
+                                <stop offset="0%" stop-color="#e8c4b8" stop-opacity="0.4" />
+                                <stop offset="100%" stop-color="#d4a59a" stop-opacity="0.1" />
+                            </radialGradient>
+                            <radialGradient id="circleGrad3">
+                                <stop offset="0%" stop-color="#4a9da3" stop-opacity="0.3" />
+                                <stop offset="100%" stop-color="#2d7d82" stop-opacity="0.1" />
+                            </radialGradient>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Our Services</div>
+                <h2 class="section-title">Therapeutic Treatments</h2>
+                <p class="section-subtitle">
+                    Discover our range of reflexology treatments designed to restore balance
+                    and promote wellness in body, mind, and spirit.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🦶</div>
+                    <h3 class="service-title">Reflexology</h3>
+                    <p class="service-description">
+                        This gentle therapy may bring relief to a wide range of conditions.
+                        Through careful manipulation of pressure points on the feet, we promote
+                        natural healing and deep relaxation.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🤰</div>
+                    <h3 class="service-title">Pregnancy Care</h3>
+                    <p class="service-description">
+                        Specialized reflexology for expecting mothers, helping to ease common
+                        pregnancy discomforts and promote relaxation during this special time.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌸</div>
+                    <h3 class="service-title">Stress Relief</h3>
+                    <p class="service-description">
+                        Combat daily stress and tension with targeted reflexology techniques
+                        that encourage deep relaxation and mental clarity.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💆</div>
+                    <h3 class="service-title">Pain Management</h3>
+                    <p class="service-description">
+                        Natural pain relief through reflexology, addressing chronic conditions
+                        and promoting the body's innate healing abilities.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧘</div>
+                    <h3 class="service-title">Wellness Sessions</h3>
+                    <p class="service-description">
+                        Regular maintenance sessions to support overall health, boost immunity,
+                        and maintain balance in your daily life.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👶</div>
+                    <h3 class="service-title">Family Care</h3>
+                    <p class="service-description">
+                        Gentle reflexology treatments suitable for all ages, from children
+                        to seniors, supporting family wellness together.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-image">
+                    <div class="about-image-main">
+                        <svg viewBox="0 0 500 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="500" height="600" fill="url(#aboutGradient)" />
+
+                            <!-- Hands in relaxing position (simplified representation) -->
+                            <g opacity="0.6">
+                                <!-- Palm/Hand outline -->
+                                <ellipse cx="250" cy="320" rx="80" ry="100" fill="url(#handGradient)" opacity="0.4" />
+                                <ellipse cx="250" cy="300" rx="70" ry="85" fill="#faf7f4" opacity="0.6" />
+
+                                <!-- Fingers (simplified) -->
+                                <ellipse cx="230" cy="240" rx="15" ry="45" fill="url(#fingerGrad)" opacity="0.5"
+                                    transform="rotate(-10 230 240)" />
+                                <ellipse cx="250" cy="220" rx="15" ry="50" fill="url(#fingerGrad)" opacity="0.5" />
+                                <ellipse cx="270" cy="240" rx="15" ry="45" fill="url(#fingerGrad)" opacity="0.5"
+                                    transform="rotate(10 270 240)" />
+                            </g>
+
+                            <!-- Decorative botanical elements around -->
+                            <g opacity="0.5">
+                                <!-- Top left botanical -->
+                                <path d="M80 120 Q90 140 85 160 Q80 180 65 185 Q70 165 68 145 Q66 125 80 120Z"
+                                    fill="#9db5a5" />
+                                <path d="M80 120 Q68 135 70 150" stroke="#2d7d82" stroke-width="1.5" />
+
+                                <!-- Top right botanical -->
+                                <path d="M420 100 Q410 120 415 140 Q420 160 435 165 Q430 145 432 125 Q434 105 420 100Z"
+                                    fill="#4a9da3" />
+                                <path d="M420 100 Q432 115 430 130" stroke="#2d7d82" stroke-width="1.5" />
+
+                                <!-- Bottom left flower -->
+                                <circle cx="100" cy="480" r="25" fill="#e8c4b8" opacity="0.5" />
+                                <circle cx="88" cy="473" r="10" fill="#d4a59a" />
+                                <circle cx="112" cy="473" r="10" fill="#d4a59a" />
+                                <circle cx="100" cy="493" r="10" fill="#d4a59a" />
+                                <circle cx="100" cy="467" r="10" fill="#d4a59a" />
+                                <circle cx="100" cy="480" r="8" fill="#e8c4b8" />
+
+                                <!-- Bottom right botanical -->
+                                <circle cx="400" cy="500" r="20" fill="#9db5a5" opacity="0.4" />
+                                <circle cx="390" cy="495" r="8" fill="#4a9da3" opacity="0.6" />
+                                <circle cx="410" cy="495" r="8" fill="#4a9da3" opacity="0.6" />
+                                <circle cx="400" cy="510" r="8" fill="#4a9da3" opacity="0.6" />
+                            </g>
+
+                            <!-- Decorative flowing lines -->
+                            <g opacity="0.3" stroke="#2d7d82" stroke-width="2" fill="none">
+                                <path d="M150 150 Q200 180 250 170 Q300 160 350 180" />
+                                <path d="M120 400 Q170 420 220 410 Q270 400 320 420" />
+                            </g>
+
+                            <!-- Spa stones concept -->
+                            <g opacity="0.4">
+                                <ellipse cx="180" cy="420" rx="40" ry="25" fill="#5a6c6d" />
+                                <ellipse cx="250" cy="440" rx="50" ry="30" fill="#5a6c6d" />
+                                <ellipse cx="330" cy="425" rx="45" ry="28" fill="#5a6c6d" />
+                            </g>
+
+                            <!-- Accent circles -->
+                            <g opacity="0.25">
+                                <circle cx="420" cy="280" r="60" fill="url(#accentCircle1)" />
+                                <circle cx="80" cy="350" r="50" fill="url(#accentCircle2)" />
+                            </g>
+
+                            <defs>
+                                <linearGradient id="aboutGradient" x1="0" y1="0" x2="500" y2="600">
+                                    <stop offset="0%" stop-color="#f5f0ea" />
+                                    <stop offset="100%" stop-color="#faf7f4" />
+                                </linearGradient>
+                                <radialGradient id="handGradient">
+                                    <stop offset="0%" stop-color="#e8c4b8" stop-opacity="0.6" />
+                                    <stop offset="100%" stop-color="#d4a59a" stop-opacity="0.3" />
+                                </radialGradient>
+                                <linearGradient id="fingerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#d4a59a" stop-opacity="0.5" />
+                                    <stop offset="100%" stop-color="#e8c4b8" stop-opacity="0.3" />
+                                </linearGradient>
+                                <radialGradient id="accentCircle1">
+                                    <stop offset="0%" stop-color="#4a9da3" stop-opacity="0.4" />
+                                    <stop offset="100%" stop-color="#2d7d82" stop-opacity="0.1" />
+                                </radialGradient>
+                                <radialGradient id="accentCircle2">
+                                    <stop offset="0%" stop-color="#9db5a5" stop-opacity="0.4" />
+                                    <stop offset="100%" stop-color="#2d7d82" stop-opacity="0.1" />
+                                </radialGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="about-image-badge">
+                        <div class="about-image-badge-number">15+</div>
+                        <div class="about-image-badge-text">Years of Experience</div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2>Why Choose Dublin Reflexology?</h2>
+                    <p>
+                        At Dublin Reflexology, we believe in the body's natural ability to heal itself.
+                        Our experienced practitioners use time-honored reflexology techniques combined
+                        with a deep understanding of holistic wellness to help you achieve optimal health.
+                    </p>
+                    <p>
+                        We provide a calm, nurturing environment where you can relax and let the healing
+                        begin. Each session is tailored to your individual needs, ensuring the most
+                        beneficial experience possible.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-text">Certified & Experienced Practitioners</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-text">Calm & Welcoming Environment</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-text">Personalized Treatment Plans</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-text">Suitable for All Ages</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Testimonials</div>
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">
+                    Real experiences from people who have discovered the healing power of reflexology.
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testimonial-text">
+                        "After years of chronic back pain, I finally found relief through reflexology.
+                        The sessions are deeply relaxing and I always leave feeling renewed.
+                        Highly recommend!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SM</div>
+                        <div class="testimonial-author-info">
+                            <div class="testimonial-author-name">Sarah Murphy</div>
+                            <div class="testimonial-author-role">Dublin 2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testimonial-text">
+                        "The pregnancy reflexology sessions were a lifesaver. They helped me manage
+                        discomfort and stress throughout my pregnancy. Professional and caring service."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">EK</div>
+                        <div class="testimonial-author-info">
+                            <div class="testimonial-author-name">Emma Kelly</div>
+                            <div class="testimonial-author-role">Dublin 4</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="testimonial-text">
+                        "I was skeptical at first, but reflexology has genuinely improved my overall
+                        wellbeing. The calming atmosphere and expert care make each visit a treat."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JD</div>
+                        <div class="testimonial-author-info">
+                            <div class="testimonial-author-name">James Doyle</div>
+                            <div class="testimonial-author-role">Dublin 6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Ready to Begin Your Healing Journey?</h2>
+            <p>
+                Book your reflexology session today and experience the natural path to wellness.
+                We're here to support you every step of the way.
+            </p>
+            <a href="#contact" class="btn btn-secondary">Make a Reservation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Dublin Reflexology</h3>
+                    <p>
+                        Providing gentle, effective reflexology treatments to support your natural
+                        healing and wellness journey.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Instagram">i</a>
+                        <a href="#" aria-label="Twitter">t</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Reflexology</a></li>
+                        <li><a href="#">Pregnancy Care</a></li>
+                        <li><a href="#">Stress Relief</a></li>
+                        <li><a href="#">Pain Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Dublin City Centre</li>
+                        <li>+353 1 234 5678</li>
+                        <li>info@dublinreflexology.ie</li>
+                        <li>Mon-Fri: 9am - 7pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dublin Reflexology. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
