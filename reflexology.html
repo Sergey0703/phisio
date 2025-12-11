@@ -466,12 +466,31 @@
 
         .service-card {
             background: white;
-            padding: 2.5rem;
             border-radius: 20px;
             box-shadow: var(--shadow-sm);
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .service-card::before {
@@ -1186,202 +1205,199 @@
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M13.5 2C13.5 2.82843 12.8284 3.5 12 3.5C11.1716 3.5 10.5 2.82843 10.5 2C10.5 1.17157 11.1716 0.5 12 0.5C12.8284 0.5 13.5 1.17157 13.5 2Z" />
-                            <path
-                                d="M17.5 4C17.5 5.10457 16.6046 6 15.5 6C14.3954 6 13.5 5.10457 13.5 4C13.5 2.89543 14.3954 2 15.5 2C16.6046 2 17.5 2.89543 17.5 4Z" />
-                            <path
-                                d="M21 7.5C21 8.88071 19.8807 10 18.5 10C17.1193 10 16 8.88071 16 7.5C16 6.11929 17.1193 5 18.5 5C19.8807 5 21 6.11929 21 7.5Z" />
-                            <path
-                                d="M8.5 4C8.5 5.10457 7.60457 6 6.5 6C5.39543 6 4.5 5.10457 4.5 4C4.5 2.89543 5.39543 2 6.5 2C7.60457 2 8.5 2.89543 8.5 4Z" />
-                            <path
-                                d="M12 22C16.4183 22 20 18.4183 20 14C20 12.5 19 11 18 11C16.5 11 16 12.5 15 13C14 13.5 13 13 12 11C11 9 13 7 11 7C8 7 4 10 4 14C4 18.4183 7.58172 22 12 22Z" />
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Reflexology</h3>
-                    <p class="service-description">
-                       Reflexology is a holistic therapy that supports wellbeing on physical, emotional, and psychological
-levels. By applying gentle pressure to specific points on the feet, hands, or ears—areas traditionally
+                    <img src="service-reflexology.png" alt="Reflexology" class="service-image">
+                    <div class="service-content">
+                        <h3 class="service-title">Reflexology</h3>
+                        <p class="service-description">
+                            Reflexology is a holistic therapy that supports wellbeing on physical, emotional, and
+                            psychological
+                            levels. By applying gentle pressure to specific points on the feet, hands, or ears—areas
+                            traditionally
 
-believed to correspond with different parts of the body - reflexology encourages relaxation, helps
-release tension, and promotes a sense of overall balance.
-Many clients find that reflexology creates a calming space where stress can ease, emotional
-wellbeing can be supported, and the body’s natural restorative processes can function more
-effectively. Through deep relaxation and improved balance within the body, reflexology can help
-strengthen the mind and body’s ability to support their own healing and resilience.
-Reflexology is also often chosen by clients undergoing cancer care as a comfort-focused
-complementary therapy. With the consent of their GP or consultant, reflexology may help
-individuals manage the stress, tension, and general discomfort that can accompany cancer
-treatments, offering a gentle and nurturing source of support during a challenging time.
-As a soothing mind-body practice, reflexology offers a pathway to greater harmony, grounding, and
-inner strength.
-                    </p>
-                    </p>
-1 hour session ......60 Euro
-                    </p>
+                            believed to correspond with different parts of the body - reflexology encourages relaxation,
+                            helps
+                            release tension, and promotes a sense of overall balance.
+                            Many clients find that reflexology creates a calming space where stress can ease, emotional
+                            wellbeing can be supported, and the body’s natural restorative processes can function more
+                            effectively. Through deep relaxation and improved balance within the body, reflexology can
+                            help
+                            strengthen the mind and body’s ability to support their own healing and resilience.
+                            Reflexology is also often chosen by clients undergoing cancer care as a comfort-focused
+                            complementary therapy. With the consent of their GP or consultant, reflexology may help
+                            individuals manage the stress, tension, and general discomfort that can accompany cancer
+                            treatments, offering a gentle and nurturing source of support during a challenging time.
+                            As a soothing mind-body practice, reflexology offers a pathway to greater harmony,
+                            grounding, and
+                            inner strength.
+                        </p>
+                        </p>
+                        1 hour session ......60 Euro
+                        </p>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M13 4C13 5.10457 12.1046 6 11 6C9.89543 6 9 5.10457 9 4C9 2.89543 9.89543 2 11 2C12.1046 2 13 2.89543 13 4Z" />
-                            <path
-                                d="M16 14C16 17.3137 13.3137 20 10 20C6.68629 20 4 17.3137 4 14C4 10.6863 6.68629 8 10 8C13.3137 8 16 10.6863 16 14Z"
-                                opacity="0.5" />
-                            <path
-                                d="M13.828 10.172C14.5 11 15 12.5 15 14C15 16.7614 12.7614 19 10 19C7.23858 19 5 16.7614 5 14C5 12.5 5.5 11 6.172 10.172C6.5 8 8 7 10 7C12 7 13.5 8 13.828 10.172Z" />
-                        </svg>
+                    <img src="service-massage.png" alt="Massage Therapy" class="service-image">
+                    <div class="service-content">
+                        <h3 class="service-title">Massage Therapy</h3>
+                        <p class="service-description">
+                            Massage Therapy is a holistic approach that supports healing on multiple levels—physical,
+                            emotional, and psychological. Through skilled, intentional touch, massage helps release
+                            muscular
+                            tension, improve circulation, and support the body’s natural healing processes. At the same
+                            time,
+                            the calming effects of massage can help reduce stress, ease emotional strain, and promote a
+                            deeper
+                            sense of relaxation and balance.
+                            By nurturing both the body and mind, massage therapy creates a supportive space where
+                            clients can
+                            restore wellbeing, reconnect with themselves, and experience greater overall harmony.
+                        </p>
+                        Full Body Deep Tissue Massage 90 minutes....... 90 Euro
+                        </p>
+                        1 hour Massage ....60 Euro
+                        </p>
+                        30 Minute Massage .....40 Euro
+                        </p>
+                        Hot Stone Massage 60 minutes......80 Euro
+                        </p>
+                        Indian Head Massage 1 Hour.... 60 Euro
+                        </p>
                     </div>
-                    <h3 class="service-title">Massage Therapy</h3>
-                    <p class="service-description">
-                        Massage Therapy is a holistic approach that supports healing on multiple levels—physical,
-emotional, and psychological. Through skilled, intentional touch, massage helps release muscular
-tension, improve circulation, and support the body’s natural healing processes. At the same time,
-the calming effects of massage can help reduce stress, ease emotional strain, and promote a deeper
-sense of relaxation and balance.
-By nurturing both the body and mind, massage therapy creates a supportive space where clients can
-restore wellbeing, reconnect with themselves, and experience greater overall harmony.
-                    </p>
-                    Full Body Deep Tissue Massage 90 minutes....... 90 Euro
-                     </p>
-                     1 hour Massage ....60 Euro 
-                     </p>
-                     30 Minute Massage .....40 Euro
-                     </p>
-                     Hot Stone Massage 60 minutes......80 Euro
-                     </p>
-                     Indian Head Massage  1 Hour.... 60 Euro
-                     </p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L14 7H19L15 11L16.5 16L12 13.5L7.5 16L9 11L5 7H10L12 2Z" opacity="0.5" />
-                            <path
-                                d="M12 6C13.5 6 15 7.5 15 9C15 10.5 13.5 12 12 12C10.5 12 9 10.5 9 9C9 7.5 10.5 6 12 6Z" />
-                            <path d="M12 14C15 14 17 16 17 18C17 20 15 21 12 21C9 21 7 20 7 18C7 16 9 14 12 14Z" />
-                        </svg>
+                    <img src="service-pain-management.png" alt="Pain Management" class="service-image">
+                    <div class="service-content">
+                        <h3 class="service-title">Pain Management</h3>
+                        <p class="service-description">
+                            The Prism Approach supports pain management by combining calming, body-based therapies and
+                            mindful practices that help ease tension, reduce stress, and encourage the body to settle
+                            into a more relaxed, balanced state. Through techniques such as Reflexology, Massage,
+                            Hypnotherapy, Mindfulness Meditation, and Laughter Yoga, the approach helps soothe the
+                            nervous system, release physical tightness, and promote a greater sense of comfort and ease.
+                            By working collaboratively, you select the therapies that feel most supportive for your
+                            needs, creating a personalised pathway that helps you cope with pain in a gentle, holistic
+                            way.
+                        </p>
+                        Individual 1 hour session..... 60 Euro
+                        </p>
                     </div>
-                    <h3 class="service-title">Pain Management</h3>
-                    <p class="service-description">
-                        The Prism Approach supports pain management by combining calming, body-based therapies and mindful practices that help ease tension, reduce stress, and encourage the body to settle into a more relaxed, balanced state. Through techniques such as Reflexology, Massage, Hypnotherapy, Mindfulness Meditation, and Laughter Yoga, the approach helps soothe the nervous system, release physical tightness, and promote a greater sense of comfort and ease. By working collaboratively, you select the therapies that feel most supportive for your needs, creating a personalised pathway that helps you cope with pain in a gentle, holistic way.
-                    </p>
-                    Individual 1 hour session... 60 Euro
-                    </p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 4C14 4 15.5 5.5 15.5 7.5C15.5 9.5 14 11 12 11C10 11 8.5 9.5 8.5 7.5C8.5 5.5 10 4 12 4Z" />
-                            <path
-                                d="M6 14C6 12 8 11 12 11C16 11 18 12 18 14V16C18 17 17 18 16 18H8C7 18 6 17 6 16V14Z" />
-                            <path d="M4 14L2 12M20 14L22 12" stroke="white" stroke-width="2" stroke-linecap="round" />
-                        </svg>
+                    <img src="service-hypnotherapy.png" alt="Hypnotherapy" class="service-image">
+                    <div class="service-content">
+                        <h3 class="service-title">Hypnotherapy with CBT Techniques</h3>
+                        <p class="service-description">
+                            Hypnotherapy with CBT Techniques offers a powerful, holistic approach to supporting
+                            emotional,
+                            psychological, and overall wellbeing. By combining the deep relaxation and focused awareness
+                            of
+                            hypnotherapy with the practical, evidence-informed strategies of Cognitive Behavioural
+                            Therapy,
+                            this integrated method helps clients explore unhelpful patterns, shift limiting beliefs, and
+                            develop
+                            healthier ways of thinking and responding.
+                            Within this calm, guided state, clients can begin to release stress, ease emotional tension,
+                            and
+                            strengthen the mind’s natural ability to support healing and resilience. This combined
+                            approach
+                            empowers you to refract your thinking - breaking old thought cycles - and reframe your life
+                            with
+                            greater clarity, confidence, and balance.
+                            By nurturing both the conscious and subconscious mind, Hypnotherapy with CBT Techniques
+                            provides a supportive pathway toward personal growth, emotional harmony, and positive,
+                            lasting
+                            change.
+                        </p>
+                        1 hour session........ 60 Euro
+                        </p>
                     </div>
-                    <h3 class="service-title">Hypnotherapy with CBT Techniques</h3>
-                    <p class="service-description">
-                        Hypnotherapy with CBT Techniques offers a powerful, holistic approach to supporting emotional,
-psychological, and overall wellbeing. By combining the deep relaxation and focused awareness of
-hypnotherapy with the practical, evidence-informed strategies of Cognitive Behavioural Therapy,
-this integrated method helps clients explore unhelpful patterns, shift limiting beliefs, and develop
-healthier ways of thinking and responding.
-Within this calm, guided state, clients can begin to release stress, ease emotional tension, and
-strengthen the mind’s natural ability to support healing and resilience. This combined approach
-empowers you to refract your thinking - breaking old thought cycles - and reframe your life with
-greater clarity, confidence, and balance.
-By nurturing both the conscious and subconscious mind, Hypnotherapy with CBT Techniques
-provides a supportive pathway toward personal growth, emotional harmony, and positive, lasting
-change.
-                    </p>
-1 hour session........ 60 Euro
-</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="10" y="16" width="4" height="6" rx="1" />
-                            <rect x="8" y="11" width="8" height="4" rx="2" />
-                            <rect x="6" y="6" width="12" height="4" rx="2" />
-                            <rect x="9" y="2" width="6" height="3" rx="1.5" />
-                        </svg>
+                    <img src="service-mindfulness.png" alt="Mindfulness" class="service-image">
+                    <div class="service-content">
+                        <h3 class="service-title">Mindfulness and Meditation</h3>
+                        <p class="service-description">
+                            Mindfulness and Meditation are gentle yet powerful practices that support wellbeing on
+                            physical,
+                            emotional, and psychological levels. By guiding your attention into the present moment,
+                            these
+                            practices help calm the mind, ease tension in the body, and create a sense of inner clarity
+                            and
+                            balance.
+                            Through regular practice, mindfulness and meditation can reduce stress, support emotional
+                            stability,
+                            and encourage healthier thought patterns - helping you strengthen the mind and body’s
+                            natural
+                            ability to restore balance and support healing. As you learn to observe your thoughts with
+                            greater
+                            awareness and compassion, you gain the ability to refract unhelpful thinking and reframe
+                            your life
+                            with renewed perspective and purpose.
+                            These practices provide a peaceful space where you can reconnect with yourself, cultivate
+                            resilience,
+                            and nurture a deeper sense of harmony in everyday life.
+                        </p>
+                        1 hour session ......60 Euro
+                        </p>
                     </div>
-                    <h3 class="service-title">Mindfulness and Meditation</h3>
-                    <p class="service-description">
-                        Mindfulness and Meditation are gentle yet powerful practices that support wellbeing on physical,
-emotional, and psychological levels. By guiding your attention into the present moment, these
-practices help calm the mind, ease tension in the body, and create a sense of inner clarity and
-balance.
-Through regular practice, mindfulness and meditation can reduce stress, support emotional stability,
-and encourage healthier thought patterns - helping you strengthen the mind and body’s natural
-ability to restore balance and support healing. As you learn to observe your thoughts with greater
-awareness and compassion, you gain the ability to refract unhelpful thinking and reframe your life
-with renewed perspective and purpose.
-These practices provide a peaceful space where you can reconnect with yourself, cultivate resilience,
-and nurture a deeper sense of harmony in everyday life.
-                    </p>
-                    1 hour session ......60 Euro
-                   </p> 
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M16 4C17.5 4 19 5.5 19 7.5C19 9.5 17.5 11 16 11C14.5 11 13 9.5 13 7.5C13 5.5 14.5 4 16 4Z" />
-                            <path d="M8 8C9 8 10 9 10 10.5C10 12 9 13 8 13C7 13 6 12 6 10.5C6 9 7 8 8 8Z" />
-                            <path d="M16 12C19 12 21 14 21 16V20H11V16C11 14 13 12 16 12Z" />
-                            <path d="M8 14C10 14 11 15 11 16.5V20H3V16.5C3 15 5 14 8 14Z" />
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Laughter Yoga</h3>
-                    <p class="service-description">
-                        Laughter Yoga is a joyful mind-body practice that promotes wellbeing on physical, emotional, and
-psychological levels. Combining intentional laughter exercises with gentle breathing techniques, it
-helps release tension, uplift mood, and create a sense of openness and ease throughout the body
-and mind.
-Even when practised intentionally rather than spontaneously, laughter can stimulate relaxation,
-reduce stress, and enhance feelings of connection and positivity. This uplifting practice supports
-emotional resilience and helps strengthen the mind and body’s natural ability to restore balance and
+                    <img src="service-laughter.png" alt="Laughter Yoga" class="service-image">
+                    <div class="service-content">
+                        <h3 class="service-title">Laughter Yoga</h3>
+                        <p class="service-description">
+                            Laughter Yoga is a joyful mind-body practice that promotes wellbeing on physical, emotional,
+                            and
+                            psychological levels. Combining intentional laughter exercises with gentle breathing
+                            techniques, it
+                            helps release tension, uplift mood, and create a sense of openness and ease throughout the
+                            body
+                            and mind.
+                            Even when practised intentionally rather than spontaneously, laughter can stimulate
+                            relaxation,
+                            reduce stress, and enhance feelings of connection and positivity. This uplifting practice
+                            supports
+                            emotional resilience and helps strengthen the mind and body’s natural ability to restore
+                            balance and
 
-support healing. Through shared laughter and mindful breathing, clients can begin to refract
-unhelpful thinking and reframe their lives with renewed lightness, optimism, and clarity.
-Laughter Yoga offers a playful yet powerful pathway to greater harmony, energy, and emotional
-wellbeing - reminding us that joy itself can be deeply therapeutic.
-                    </p>
-                    Group session.... 10 Euro Each
-                    </p>
-</div>
+                            support healing. Through shared laughter and mindful breathing, clients can begin to refract
+                            unhelpful thinking and reframe their lives with renewed lightness, optimism, and clarity.
+                            Laughter Yoga offers a playful yet powerful pathway to greater harmony, energy, and
+                            emotional
+                            wellbeing - reminding us that joy itself can be deeply therapeutic.
+                        </p>
+                        Group session.... 10 Euro Each
+                        </p>
+                    </div>
+                </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M16 4C17.5 4 19 5.5 19 7.5C19 9.5 17.5 11 16 11C14.5 11 13 9.5 13 7.5C13 5.5 14.5 4 16 4Z" />
-                            <path d="M8 8C9 8 10 9 10 10.5C10 12 9 13 8 13C7 13 6 12 6 10.5C6 9 7 8 8 8Z" />
-                            <path d="M16 12C19 12 21 14 21 16V20H11V16C11 14 13 12 16 12Z" />
-                            <path d="M8 14C10 14 11 15 11 16.5V20H3V16.5C3 15 5 14 8 14Z" />
-                        </svg>
+                    <img src="service-mindfulness.png" alt="Corporate Wellness" class="service-image">
+                    <div class="service-content">
+                        <h3 class="service-title">Corporate Wellness Programs</h3>
+                        <p class="service-description">
+                            The Prism Approach brings holistic wellbeing into the workplace, helping employees reduce
+                            stress, improve focus, and recharge their energy. By offering a tailored combination of
+                            therapies - such as Mindfulness Meditation, Laughter Yoga, Reflexology, Massage, and
+                            Hypnotherapy - employees can find practical ways to manage tension, boost resilience, and
+                            support both mental and physical health. The collaborative nature of the approach allows
+                            each individual to choose what works best for them, creating a personalised wellness
+                            experience that enhances productivity, morale, and overall workplace wellbeing.
+                        </p>
                     </div>
-                    <h3 class="service-title">Corporate Wellness Programs</h3>
-                    <p class="service-description">
-                        The Prism Approach brings holistic wellbeing into the workplace, helping employees reduce stress, improve focus, and recharge their energy. By offering a tailored combination of therapies - such as Mindfulness Meditation, Laughter Yoga, Reflexology, Massage, and Hypnotherapy - employees can find practical ways to manage tension, boost resilience, and support both mental and physical health. The collaborative nature of the approach allows each individual to choose what works best for them, creating a personalised wellness experience that enhances productivity, morale, and overall workplace wellbeing.
-                    </p>
-                    </div>
+                </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M16 4C17.5 4 19 5.5 19 7.5C19 9.5 17.5 11 16 11C14.5 11 13 9.5 13 7.5C13 5.5 14.5 4 16 4Z" />
-                            <path d="M8 8C9 8 10 9 10 10.5C10 12 9 13 8 13C7 13 6 12 6 10.5C6 9 7 8 8 8Z" />
-                            <path d="M16 12C19 12 21 14 21 16V20H11V16C11 14 13 12 16 12Z" />
-                            <path d="M8 14C10 14 11 15 11 16.5V20H3V16.5C3 15 5 14 8 14Z" />
-                        </svg>
+                    <img src="service-reflexology.png" alt="Family Care" class="service-image">
+                    <div class="service-content">
+                        <h3 class="service-title">Family Care</h3>
+                        <p class="service-description">
+                            The Prism Approach supports the whole family by promoting relaxation, emotional balance, and
+                            wellbeing for all ages. Through a personalised mix of gentle therapies - such as Massage,
+                            Reflexology, Mindfulness Meditation, Hypnotherapy, and Laughter Yoga - family members can
+                            reduce stress, boost resilience, and enjoy quality time together in a calm, nurturing
+                            environment. By collaborating on the therapies that suit each individual, The Prism Approach
+                            helps create a shared path to healthier, happier family life.
+                        </p>
                     </div>
-                    <h3 class="service-title">Family Care</h3>
-                    <p class="service-description">
-                        The Prism Approach supports the whole family by promoting relaxation, emotional balance, and wellbeing for all ages. Through a personalised mix of gentle therapies - such as Massage, Reflexology, Mindfulness Meditation, Hypnotherapy, and Laughter Yoga - family members can reduce stress, boost resilience, and enjoy quality time together in a calm, nurturing environment. By collaborating on the therapies that suit each individual, The Prism Approach helps create a shared path to healthier, happier family life.
-                    </p>
                 </div>
             </div>
         </div>
@@ -1492,37 +1508,42 @@ wellbeing - reminding us that joy itself can be deeply therapeutic.
                 <div class="about-content">
                     <h2>Why Choose The Prism Approach?</h2>
                     <p>
-                        Because The Prism Approach empowers you to co-create a healing journey that truly feels like your own, blending gentle, holistic therapies and mindful practices into a personalised path that supports your mind, body, and spirit.
-                     <p></p>   
-                        Discover The Prism Approach - a truly holistic and integrative experience designed to nurture the
-mind, body, and spirit. By bringing together powerful modalities such as hypnotherapy with CBT
-techniques, reflexology, therapeutic massage, mindfulness, meditation, and laughter yoga, we
-create a personalised wellbeing journey for every client.
-No two clients are the same, and neither are their needs. That’s why each Prism session is tailored to
-address your unique challenges and support you in unlocking your full potential, so you can live a
-healthier, more vibrant, and more empowered life.
-The clinic specialises in supporting the body’s natural resilience and promoting a stronger sense of
-overall wellbeing. With your GP’s or consultant’s consent, our complementary therapies work hand-
-in-hand with your medical care - helping to ease symptoms, enhance comfort, and strengthen your
-body’s innate ability to restore balance.
-<h2>About Me</h2>
-<p></p>
-I have always been passionate about helping people enhance their life experiences through
-complementary therapies. I qualified as a General and Paediatric Nurse in 1991 and have worked
-across a wide range of patient care and management settings, including medical, surgical, paediatric,
-geriatric, and dementia care services.
-I have a strong interest in continuing education and evidence-informed approaches, ensuring that
-the therapies I offer are grounded in the best available knowledge to support my clients’ wellbeing.
-My formal journey into complementary therapies began in 2003 when I qualified in Massage
-Techniques. Since then, I have expanded my expertise to include Reflexology, Aromatherapy,
-energy-based therapies such as Reiki, Integrated Energy Therapy (IET), Emotional Freedom
-Techniques (EFT), Mindfulness and Meditation practices, Laughter Yoga, and most recently
-Hypnotherapy combined with CBT techniques.
-Over time, I developed my practice into a fully integrative approach, recognising that each client has
-unique needs and goals. My work is collaborative, with clients guided to actively participate in
-identifying and choosing the therapeutic approaches that are most appropriate for their personal
-journey. This ensures that every session is tailored to achieve the best possible outcomes for
-physical, emotional, and psychological wellbeing.
+                        Because The Prism Approach empowers you to co-create a healing journey that truly feels like
+                        your own, blending gentle, holistic therapies and mindful practices into a personalised path
+                        that supports your mind, body, and spirit.
+                    <p></p>
+                    Discover The Prism Approach - a truly holistic and integrative experience designed to nurture the
+                    mind, body, and spirit. By bringing together powerful modalities such as hypnotherapy with CBT
+                    techniques, reflexology, therapeutic massage, mindfulness, meditation, and laughter yoga, we
+                    create a personalised wellbeing journey for every client.
+                    No two clients are the same, and neither are their needs. That’s why each Prism session is tailored
+                    to
+                    address your unique challenges and support you in unlocking your full potential, so you can live a
+                    healthier, more vibrant, and more empowered life.
+                    The clinic specialises in supporting the body’s natural resilience and promoting a stronger sense of
+                    overall wellbeing. With your GP’s or consultant’s consent, our complementary therapies work hand-
+                    in-hand with your medical care - helping to ease symptoms, enhance comfort, and strengthen your
+                    body’s innate ability to restore balance.
+                    <h2>About Me</h2>
+                    <p></p>
+                    I have always been passionate about helping people enhance their life experiences through
+                    complementary therapies. I qualified as a General and Paediatric Nurse in 1991 and have worked
+                    across a wide range of patient care and management settings, including medical, surgical,
+                    paediatric,
+                    geriatric, and dementia care services.
+                    I have a strong interest in continuing education and evidence-informed approaches, ensuring that
+                    the therapies I offer are grounded in the best available knowledge to support my clients’ wellbeing.
+                    My formal journey into complementary therapies began in 2003 when I qualified in Massage
+                    Techniques. Since then, I have expanded my expertise to include Reflexology, Aromatherapy,
+                    energy-based therapies such as Reiki, Integrated Energy Therapy (IET), Emotional Freedom
+                    Techniques (EFT), Mindfulness and Meditation practices, Laughter Yoga, and most recently
+                    Hypnotherapy combined with CBT techniques.
+                    Over time, I developed my practice into a fully integrative approach, recognising that each client
+                    has
+                    unique needs and goals. My work is collaborative, with clients guided to actively participate in
+                    identifying and choosing the therapeutic approaches that are most appropriate for their personal
+                    journey. This ensures that every session is tailored to achieve the best possible outcomes for
+                    physical, emotional, and psychological wellbeing.
                     </p>
                     <p>
                         We provide a calm, nurturing environment where you can relax and let the healing
@@ -1585,9 +1606,13 @@ physical, emotional, and psychological wellbeing.
                         <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                     </div>
                     <p class="testimonial-text">
-                        "Suzanne has been working with me these last few months. I'm so Grateful for her Expertise. She has helped me to find Peace of Mind, take Contol of me again. I was lost in Negative Emotions. I'm now feeling Positive about myself and my Life going forward. I've learned New Skills to cope with Difficult Situations. I Manage Relationships much better now also.
-I would highly recommend Suzanne. She's very Talented and a very Patient and Understanding Human Being. I'm so glad I've had the Opportunity to be her Client.
-"
+                        "Suzanne has been working with me these last few months. I'm so Grateful for her Expertise. She
+                        has helped me to find Peace of Mind, take Contol of me again. I was lost in Negative Emotions.
+                        I'm now feeling Positive about myself and my Life going forward. I've learned New Skills to cope
+                        with Difficult Situations. I Manage Relationships much better now also.
+                        I would highly recommend Suzanne. She's very Talented and a very Patient and Understanding Human
+                        Being. I'm so glad I've had the Opportunity to be her Client.
+                        "
                     </p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">F</div>
@@ -1603,13 +1628,22 @@ I would highly recommend Suzanne. She's very Talented and a very Patient and Und
                         <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                     </div>
                     <p class="testimonial-text">
-                        "I had been struggling with severe back pain for a while — to the point where even simple movements felt difficult. I decided to try a massage with Susanna, and honestly, it turned out to be one of the best decisions I could’ve made. During the session, I could literally feel my muscles releasing tension, and the tightness that had been bothering me for days slowly started to fade.
+                        "I had been struggling with severe back pain for a while — to the point where even simple
+                        movements felt difficult. I decided to try a massage with Susanna, and honestly, it turned out
+                        to be one of the best decisions I could’ve made. During the session, I could literally feel my
+                        muscles releasing tension, and the tightness that had been bothering me for days slowly started
+                        to fade.
 
-After the massage, I felt noticeably better: my movements became smoother, the pain significantly decreased, and I finally felt some real relief in my back. My doctor did prescribe anti-inflammatory medication as well, but it was Susanna’s massage that gave me the first and most tangible improvement right away.
+                        After the massage, I felt noticeably better: my movements became smoother, the pain
+                        significantly decreased, and I finally felt some real relief in my back. My doctor did prescribe
+                        anti-inflammatory medication as well, but it was Susanna’s massage that gave me the first and
+                        most tangible improvement right away.
 
-Susanna is incredibly professional, attentive, and genuinely caring. She intuitively knows where more work is needed and creates an atmosphere of complete relaxation and trust.
+                        Susanna is incredibly professional, attentive, and genuinely caring. She intuitively knows where
+                        more work is needed and creates an atmosphere of complete relaxation and trust.
 
-I truly recommend Susanna to anyone dealing with back issues or simply wanting to take good care of their body. Her massage is real relief — and an amazing experience overall!."
+                        I truly recommend Susanna to anyone dealing with back issues or simply wanting to take good care
+                        of their body. Her massage is real relief — and an amazing experience overall!."
                     </p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">YP</div>
@@ -1625,7 +1659,15 @@ I truly recommend Susanna to anyone dealing with back issues or simply wanting t
                         <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                     </div>
                     <p class="testimonial-text">
-                        "I went to Suzanne to help me to best move along my path of self-development and improvement. Having previously done CBT I was interested to see what hypnotherapy could do for me. I found Suzanne to be kind, approachable and had great empathy. I felt I could open up about childhood issues that I had previously never spoken about. We would discuss what was coming up for me and she encouraged and supported me all the way. The hypnosis was gentle and I was always in control of the situation. Suzanne gave me recordings of our sessions as well as techniques and tools that I still use and still find beneficial. I have found improvement in my sleep and my confidence and after years I have stopped biting my nails. I would highly recommend Suzanne. She is professional and dedicated to her work."
+                        "I went to Suzanne to help me to best move along my path of self-development and improvement.
+                        Having previously done CBT I was interested to see what hypnotherapy could do for me. I found
+                        Suzanne to be kind, approachable and had great empathy. I felt I could open up about childhood
+                        issues that I had previously never spoken about. We would discuss what was coming up for me and
+                        she encouraged and supported me all the way. The hypnosis was gentle and I was always in control
+                        of the situation. Suzanne gave me recordings of our sessions as well as techniques and tools
+                        that I still use and still find beneficial. I have found improvement in my sleep and my
+                        confidence and after years I have stopped biting my nails. I would highly recommend Suzanne. She
+                        is professional and dedicated to her work."
                     </p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">M</div>
@@ -1658,7 +1700,8 @@ I truly recommend Susanna to anyone dealing with back issues or simply wanting t
                 <div class="footer-col">
                     <h3>The Prism Approach</h3>
                     <p>
-                      Discover the Prism Approach - a unique, client-led collaboration that weaves together therapeutic touch, mindful practices, and joyful movement to nurture your whole self.
+                        Discover the Prism Approach - a unique, client-led collaboration that weaves together
+                        therapeutic touch, mindful practices, and joyful movement to nurture your whole self.
                     </p>
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook">
@@ -1712,7 +1755,8 @@ I truly recommend Susanna to anyone dealing with back issues or simply wanting t
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 The Prism Approach. All rights reserved. Powered by AIMediaFlow.vercel.app | Privacy Policy | Terms of Service</p>
+                <p>&copy; 2025 The Prism Approach. All rights reserved. Powered by AIMediaFlow.vercel.app | Privacy
+                    Policy | Terms of Service</p>
             </div>
         </div>
     </footer>
