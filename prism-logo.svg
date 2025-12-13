@@ -1,0 +1,29 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Green Triangle Outline -->
+    <path d="M100 20 L180 170 H20 L100 20Z" stroke="#4CAF50" stroke-width="12" stroke-linejoin="round" fill="none"/>
+    
+    <!-- Prism Light Beams -->
+    <g opacity="0.8">
+        <!-- Blue Beam -->
+        <path d="M65 100 L160 60 L160 90 L65 100Z" fill="url(#blueGradient)" />
+        <!-- Purple Beam -->
+        <path d="M65 100 L160 90 L160 120 L65 100Z" fill="url(#purpleGradient)" />
+        <!-- Pink Beam -->
+        <path d="M65 100 L160 120 L160 150 L65 100Z" fill="url(#pinkGradient)" />
+    </g>
+
+    <defs>
+        <linearGradient id="blueGradient" x1="65" y1="100" x2="160" y2="75">
+            <stop offset="0%" stop-color="#2196F3" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#2196F3" stop-opacity="0.1"/>
+        </linearGradient>
+        <linearGradient id="purpleGradient" x1="65" y1="100" x2="160" y2="105">
+            <stop offset="0%" stop-color="#9C27B0" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#9C27B0" stop-opacity="0.1"/>
+        </linearGradient>
+        <linearGradient id="pinkGradient" x1="65" y1="100" x2="160" y2="135">
+            <stop offset="0%" stop-color="#E91E63" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#E91E63" stop-opacity="0.1"/>
+        </linearGradient>
+    </defs>
+</svg>
