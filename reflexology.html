@@ -710,9 +710,38 @@
             color: var(--color-text-medium);
             font-style: italic;
             line-height: 1.8;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.5rem;
             position: relative;
             z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-text.truncated {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more-btn {
+            background: none;
+            border: none;
+            color: var(--color-primary);
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            padding: 0;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+            transition: color 0.3s ease;
+        }
+
+        .read-more-btn:hover {
+            color: var(--color-primary-light);
+            text-decoration: underline;
         }
 
         .testimonial-author {
@@ -995,6 +1024,48 @@
                 font-size: 2rem;
             }
         }
+
+        /* Logo Grid Styles */
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            align-items: center;
+            justify-items: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .logo-grid-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+        }
+
+        .logo-grid-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .logo-grid-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            .logo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
     </style>
 </head>
 
@@ -1050,7 +1121,8 @@
                 <a href="#services">Services</a>
                 <a href="#about">About</a>
                 <a href="#testimonials">Testimonials</a>
-                <a href="#contact" class="btn btn-primary">Book Now</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="mailto:theprismapproach@gmail.com" class="btn btn-primary">Book Now</a>
             </nav>
             <div class="mobile-menu-toggle">
                 <span></span>
@@ -1075,7 +1147,7 @@
                     your core essence, and elevate your overall health and wellbeing.
                 </p>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">Make Reservation</a>
+                    <a href="mailto:theprismapproach@gmail.com" class="btn btn-primary">Make Reservation</a>
                     <a href="#services" class="btn btn-secondary">Our Treatments</a>
                 </div>
                 <div class="hero-stats">
@@ -1096,97 +1168,33 @@
             <div class="hero-image">
                 <div class="hero-image-decoration"></div>
                 <div class="hero-image-decoration"></div>
-                <div class="hero-image-main">
-                    <svg viewBox="0 0 600 700" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <image href="poster.jpg" width="600" height="700" preserveAspectRatio="xMidYMid slice"
-                            opacity="0.7" />
-
-                        <!-- Soft overlay to mute the image -->
-                        <rect width="600" height="700" fill="#faf7f4" opacity="0.2" />
-
-                        <!-- Botanical Leaves -->
-                        <g opacity="0.7">
-                            <!-- Large Leaf Left -->
-                            <path d="M150 300 Q120 320 130 360 Q140 400 170 410 Q160 380 165 350 Q170 320 150 300Z"
-                                fill="#9db5a5" opacity="0.6" />
-                            <path d="M150 300 Q165 320 160 350" stroke="#2d7d82" stroke-width="2" opacity="0.4" />
-
-                            <!-- Large Leaf Right -->
-                            <path d="M450 250 Q480 270 470 310 Q460 350 430 360 Q440 330 435 300 Q430 270 450 250Z"
-                                fill="#4a9da3" opacity="0.5" />
-                            <path d="M450 250 Q435 270 440 300" stroke="#2d7d82" stroke-width="2" opacity="0.4" />
-
-                            <!-- Branch with leaves -->
-                            <path d="M200 150 Q250 200 300 220 Q350 240 400 250" stroke="#5a6c6d" stroke-width="3"
-                                opacity="0.3" />
-
-                            <!-- Small leaves on branch -->
-                            <ellipse cx="230" cy="175" rx="25" ry="15" fill="#9db5a5" opacity="0.5"
-                                transform="rotate(-30 230 175)" />
-                            <ellipse cx="270" cy="200" rx="30" ry="18" fill="#4a9da3" opacity="0.5"
-                                transform="rotate(20 270 200)" />
-                            <ellipse cx="330" cy="230" rx="28" ry="16" fill="#9db5a5" opacity="0.5"
-                                transform="rotate(-15 330 230)" />
-                            <ellipse cx="370" cy="245" rx="26" ry="15" fill="#d4a59a" opacity="0.5"
-                                transform="rotate(25 370 245)" />
-                        </g>
-
-                        <!-- Floating botanical elements -->
-                        <g opacity="0.6">
-                            <!-- Flower 1 -->
-                            <circle cx="280" cy="400" r="35" fill="#e8c4b8" opacity="0.4" />
-                            <circle cx="265" cy="390" r="15" fill="#d4a59a" opacity="0.6" />
-                            <circle cx="295" cy="390" r="15" fill="#d4a59a" opacity="0.6" />
-                            <circle cx="280" cy="415" r="15" fill="#d4a59a" opacity="0.6" />
-                            <circle cx="280" cy="385" r="15" fill="#d4a59a" opacity="0.6" />
-                            <circle cx="280" cy="400" r="12" fill="#e8c4b8" />
-
-                            <!-- Flower 2 -->
-                            <circle cx="380" cy="450" r="28" fill="#9db5a5" opacity="0.3" />
-                            <circle cx="368" cy="443" r="12" fill="#4a9da3" opacity="0.5" />
-                            <circle cx="392" cy="443" r="12" fill="#4a9da3" opacity="0.5" />
-                            <circle cx="380" cy="463" r="12" fill="#4a9da3" opacity="0.5" />
-                            <circle cx="380" cy="437" r="12" fill="#4a9da3" opacity="0.5" />
-                            <circle cx="380" cy="450" r="10" fill="#2d7d82" opacity="0.6" />
-                        </g>
-
-                        <!-- Decorative circles -->
-                        <g opacity="0.3">
-                            <circle cx="500" cy="350" r="80" fill="url(#circleGrad1)" />
-                            <circle cx="100" cy="500" r="60" fill="url(#circleGrad2)" />
-                            <circle cx="520" cy="550" r="50" fill="url(#circleGrad3)" />
-                        </g>
-
-                        <!-- Stem/Grass elements at bottom -->
-                        <g opacity="0.4">
-                            <path d="M150 650 Q160 600 170 650" stroke="#9db5a5" stroke-width="3" fill="none" />
-                            <path d="M200 650 Q195 580 190 650" stroke="#4a9da3" stroke-width="2.5" fill="none" />
-                            <path d="M250 650 Q260 590 270 650" stroke="#9db5a5" stroke-width="3" fill="none" />
-                            <path d="M320 650 Q315 600 310 650" stroke="#2d7d82" stroke-width="2" fill="none" />
-                            <path d="M370 650 Q380 580 390 650" stroke="#9db5a5" stroke-width="3" fill="none" />
-                            <path d="M430 650 Q425 600 420 650" stroke="#4a9da3" stroke-width="2.5" fill="none" />
-                        </g>
-
-                        <defs>
-                            <linearGradient id="heroGradient" x1="0" y1="0" x2="600" y2="700">
-                                <stop offset="0%" stop-color="#faf7f4" />
-                                <stop offset="100%" stop-color="#f5f0ea" />
-                            </linearGradient>
-                            <radialGradient id="circleGrad1">
-                                <stop offset="0%" stop-color="#9db5a5" stop-opacity="0.3" />
-                                <stop offset="100%" stop-color="#2d7d82" stop-opacity="0.1" />
-                            </radialGradient>
-                            <radialGradient id="circleGrad2">
-                                <stop offset="0%" stop-color="#e8c4b8" stop-opacity="0.4" />
-                                <stop offset="100%" stop-color="#d4a59a" stop-opacity="0.1" />
-                            </radialGradient>
-                            <radialGradient id="circleGrad3">
-                                <stop offset="0%" stop-color="#4a9da3" stop-opacity="0.3" />
-                                <stop offset="100%" stop-color="#2d7d82" stop-opacity="0.1" />
-                            </radialGradient>
-                            </radialGradient>
-                        </defs>
-                    </svg>
+                <div class="hero-image-main" style="background: transparent; box-shadow: none; overflow: visible;">
+                    <div class="logo-grid">
+                        <div class="logo-grid-item">
+                            <img src="LOGO Westfield Health.png" alt="Westfield Health">
+                        </div>
+                        <div class="logo-grid-item">
+                            <img src="LOGO Vhi.jpg" alt="Vhi">
+                        </div>
+                        <div class="logo-grid-item">
+                            <img src="LOGO NRRI 2018.png" alt="NRRI">
+                        </div>
+                        <div class="logo-grid-item">
+                            <img src="LOGO Level Health.jpg" alt="Level Health">
+                        </div>
+                        <div class="logo-grid-item">
+                            <img src="LOGO Laya.jpg" alt="Laya Healthcare">
+                        </div>
+                        <div class="logo-grid-item">
+                            <img src="LOGO IrishLifeHealth blue.png" alt="Irish Life Health">
+                        </div>
+                        <div class="logo-grid-item">
+                            <img src="LOGO HSF.png" alt="HSF">
+                        </div>
+                        <div class="logo-grid-item">
+                            <img src="LOGO Garda Medical Aid Society.png" alt="Garda Medical Aid Society">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1199,7 +1207,7 @@
                 <div class="section-badge">Our Services</div>
                 <h2 class="section-title">Therapeutic Treatments</h2>
                 <p class="section-subtitle">
-                    Discover our range of reflexology treatments designed to restore balance
+                    Discover our range of reflexology massage treatments designed to restore balance
                     and promote wellness in body, mind, and spirit.
                 </p>
             </div>
@@ -1642,7 +1650,7 @@
                     <div class="testimonial-stars">
                         <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                     </div>
-                    <p class="testimonial-text">
+                    <p class="testimonial-text truncated">
                         "Suzanne has been working with me these last few months. I'm so Grateful for her Expertise. She
                         has helped me to find Peace of Mind, take Contol of me again. I was lost in Negative Emotions.
                         I'm now feeling Positive about myself and my Life going forward. I've learned New Skills to cope
@@ -1651,6 +1659,7 @@
                         Being. I'm so glad I've had the Opportunity to be her Client.
                         "
                     </p>
+                    <button class="read-more-btn">Read More</button>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">F</div>
                         <div class="testimonial-author-info">
@@ -1664,7 +1673,7 @@
                     <div class="testimonial-stars">
                         <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                     </div>
-                    <p class="testimonial-text">
+                    <p class="testimonial-text truncated">
                         "I had been struggling with severe back pain for a while — to the point where even simple
                         movements felt difficult. I decided to try a massage with Susanna, and honestly, it turned out
                         to be one of the best decisions I could’ve made. During the session, I could literally feel my
@@ -1682,6 +1691,7 @@
                         I truly recommend Susanna to anyone dealing with back issues or simply wanting to take good care
                         of their body. Her massage is real relief — and an amazing experience overall!."
                     </p>
+                    <button class="read-more-btn">Read More</button>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">YP</div>
                         <div class="testimonial-author-info">
@@ -1695,7 +1705,7 @@
                     <div class="testimonial-stars">
                         <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                     </div>
-                    <p class="testimonial-text">
+                    <p class="testimonial-text truncated">
                         "I went to Suzanne to help me to best move along my path of self-development and improvement.
                         Having previously done CBT I was interested to see what hypnotherapy could do for me. I found
                         Suzanne to be kind, approachable and had great empathy. I felt I could open up about childhood
@@ -1706,6 +1716,7 @@
                         confidence and after years I have stopped biting my nails. I would highly recommend Suzanne. She
                         is professional and dedicated to her work."
                     </p>
+                    <button class="read-more-btn">Read More</button>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">M</div>
                         <div class="testimonial-author-info">
@@ -1719,10 +1730,11 @@
                     <div class="testimonial-stars">
                         <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                     </div>
-                    <p class="testimonial-text">
+                    <p class="testimonial-text truncated">
                         "I decided to try reflexology for the first time to try easing back pain. It made real
                         difference easing pain and improving flexibility, I would recommend Suzanne and reflexology."
                     </p>
+                    <button class="read-more-btn">Read More</button>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">M</div>
                         <div class="testimonial-author-info">
@@ -1803,13 +1815,20 @@
                     <ul>
                         <li>Fossa Holistic Therapy Centre, Acorn Lodge, Fossa, Killarney, Co. Kerry. V93PX78</li>
                         <li>+353 87 280 25 15</li>
-                        <li>su.made@hotmail.com</li>
+                        <li><a href="mailto:theprismapproach@gmail.com"
+                                style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: color 0.3s ease;"
+                                onmouseover="this.style.color='#9db5a5'"
+                                onmouseout="this.style.color='rgba(255, 255, 255, 0.7)'">theprismapproach@gmail.com</a>
+                        </li>
                         <li>Mon-Fri: 10am - 8pm</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 The Prism Approach. All rights reserved. Powered by AIMediaFlow.vercel.app | Privacy
+                <p>&copy; 2025 The Prism Approach. All rights reserved. Powered by <a
+                        href="https://AIMediaFlow.vercel.app"
+                        style="color: rgba(255, 255, 255, 0.5); text-decoration: underline;">AIMediaFlow.vercel.app</a>
+                    | Privacy
                     Policy | Terms of Service</p>
             </div>
         </div>
@@ -1851,6 +1870,20 @@
                 nav.classList.toggle('active');
             });
         }
+
+        // Testimonials Read More Toggle
+        document.querySelectorAll('.read-more-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const text = btn.previousElementSibling;
+                text.classList.toggle('truncated');
+
+                if (text.classList.contains('truncated')) {
+                    btn.textContent = 'Read More';
+                } else {
+                    btn.textContent = 'Read Less';
+                }
+            });
+        });
     </script>
 </body>
 
